@@ -1,26 +1,26 @@
-const a = document.getElementById("a");
-const s = document.getElementById("s");
+const colors = {
+    q: "red",
+    w: "blue",
+    e: "green",
+    r: "pink",
+   
+    
+};
 
-document.addEventListener("keydown", function(event) {
+document.addEventListener("keydown", (event) => {
+    const key = event.key.toLowerCase();
+    const el = document.getElementById(key);
 
-    if (event.key === "a") {
-        a.style.backgroundColor = "red";
+    if (el && colors[key]) {
+        el.style.backgroundColor = colors[key];
     }
-
-    if (event.key === "s") {
-        s.style.backgroundColor = "blue";
-    }
-
 });
 
-document.addEventListener("keyup", function(event) {
+document.addEventListener("keyup", (event) => {
+    const key = event.key.toLowerCase();
+    const el = document.getElementById(key);
 
-    if (event.key === "a") {
-        a.style.backgroundColor = "";
+    if (el) {
+        el.style.backgroundColor = "";
     }
-
-    if (event.key === "s") {
-        s.style.backgroundColor = "";
-    }
-
 });

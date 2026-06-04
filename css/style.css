@@ -13,11 +13,15 @@ body {
 .tangentbord div {
     width: 80px;
     height: 80px;
-    border: 2px solid black;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
     font-size: 30px;
+    
+}
+
+.ruta {
+    border: 2px solid black;
 }

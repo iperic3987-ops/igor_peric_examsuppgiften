@@ -1,26 +1,10 @@
-const colors = {
-    q: "red",
-    w: "blue",
-    e: "green",
-    r: "pink",
-   
-    
-};
+document.addEventListener("keydown", function(event){
 
-document.addEventListener("keydown", (event) => {
-    const key = event.key.toLowerCase();
-    const el = document.getElementById(key);
-
-    if (el && colors[key]) {
-        el.style.backgroundColor = colors[key];
-    }
+    document.getElementById(event.key.toLowerCase()).style.backgroundColor = "blue";
 });
 
-document.addEventListener("keyup", (event) => {
-    const key = event.key.toLowerCase();
-    const el = document.getElementById(key);
+document.addEventListener("keyup", function(event){
 
-    if (el) {
-        el.style.backgroundColor = "";
-    }
+    document.getElementById(event.key.toLowerCase()).style.backgroundColor = "";
+
 });
